@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wavejumper be GAMING?????</title>
+  </head>
+  <body>
+    <h1 id=''typethis>am gamr</h1>
+
+    <p>I only play the coolest games: <a href="https://www.coolmathgames.com/">Games that require a high IQ</a>.</p>
+
+    <p>Really though, I play <strong>SSBU</strong> and main <em>Mr. Game and Watch</em>, proving I have no friends.<br>One only mains G&W if they don't want to play the game, and everyone is annoyed by that.</p>
+
+    <p>Here he is:</p>
+    <img src="/GAME WATCH.gif">
+    <p>I plan on adding a rant later about the Game and Watch lore.</p>
+    <br>
+    <p>I also play other games:</p>
+    <ul>
+      <li>Minecraft Java (wavejumpr3)</li>
+      <li>Splatoon 3</li>
+      <li>A collection of Wii games I didn't get to as a kid</li>
+    </ul>
+
+    <p>If you want to confuse people on discord, try sending <a href="/funny">this link</a>!</p>
+<script>
+function Typer (element, options, scenes) {
+	var defaultOptions = { erase: 60, type: 80, break: 1000 };
+  var config = {};
+  if (Array.isArray(options)) {
+  	scenes = options;
+    options = {};
+  }
+  for (var key in defaultOptions) {
+  	if (!defaultOptions.hasOwnProperty(key)) continue;
+    
+    if (options[key] != null) {
+    	config[key] = options[key];
+    } else {
+    	config[key] = defaultOptions[key];
+    }
+  }
+  var status = 'ready';
+  var state = '';
+  var currentSceneIndex = 0
+  
+  function type () {
+  	if (status !== 'playing') {
+    	return;
+    }
+  	var scene = scenes[currentSceneIndex];
+    if (state === scene) {
+    	return setTimeout(erase, config.break);
+    }
+    state = scene.substr(0, state.length + 1);
+    element.textContent = state;
+    setTimeout(type, config.type);
+  }
+  
+  function erase () {
+    if (status !== 'playing') {
+    	return;
+    }
+    
+  	if (state === '') {
+    	currentSceneIndex++;
+      if (currentSceneIndex === scenes.length) {
+      	currentSceneIndex = 0;
+      }
+      return type();
+    }
+  	state = state.substr(0, state.length - 1);
+    element.textContent = state;
+    
+    // after some delay, erase the next character
+    setTimeout(erase, config.erase);
+  }
+  
+  function stop () {
+  	status = 'ready';
+  }
+  
+  function play () {
+  	if (status === 'ready') {
+    	status = 'playing';
+    	type();
+    }
+  }
+  play();
+  return { play: play, stop: stop };
+}
+
+var typethis = document.getElementById('typethis');
+var player = Typer(vader, ['Gaminj','Gamon', 'Gming','AAAAAAAAAAAAAA','G A M I N G','Gamong','Why is my keyboard so bad??????','Gaming','AAAAA I speled it right that time!!!',"*spelld','speleld','I give up','anyway...','My name is Yoshikage Kira. I'm 33 years old. My house is in the northeast section of Morioh, where all the villas are, and I am not married. I work as an employee for the Kame Yu department stores, and I get home every day by 8 PM at the latest. I don't smoke, but I occasionally drink. I'm in bed by 11 PM, and make sure I get eight hours of sleep, no matter what. After having a glass of warm milk and doing about twenty minutes of stretches before going to bed, I usually have no problems sleeping until morning. Just like a baby, I wake up without any fatigue or stress in the morning. I was told there were no issues at my last check-up. I'm trying to explain that I'm a person who wishes to live a very quiet life. I take care not to trouble myself with any enemies, like winning and losing, that would cause me to lose sleep at night. That is how I deal with society, and I know that is what brings me happiness. Although, if I were to fight I wouldn't lose to anyone.']);
+</script>
+  </body>
+</html>
