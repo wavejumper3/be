@@ -1,0 +1,47 @@
+<!doctype html>
+<head>
+</head>
+<body>
+<div id="touch-region" style="height:100%;width:100%;background:#ddd;"><canvas id="mainCanvas" style="height:100%;width:100%"></canvas></div>
+<div id="output"></div>
+<script>
+const canvas = document.getElementById("mainCanvas");
+const ctx = canvas.getContext("2d");
+ctx.canvas.width  = window.innerWidth;
+ctx.canvas.height = window.innerHeight;
+let touchRegionElement = document.getElementById('touch-region');
+let outputElement = document.getElementById('output');
+let mouseDown = false;
+touchRegionElement.addEventListener('pointerdown', function(e) {
+    console.log('Touch begins');
+    mouseDown=true;
+});
+
+touchRegionElement.addEventListener('pointerup', function(e) {
+    console.log('Touch ends');
+    mouseDown=false;
+});
+function gameLoop() {
+    drawFrame();
+    if (mouseDown) {player.y += 3*Math.cos(player.angle*Math.PI/180); player.x -= 3*Math.sin(player.angle*Math.PI/180);}
+    else {player.angle += 5;}
+    window.requestAnimationFrame(gameLoop, 10);
+}
+function drawFrame() {
+    ctx.save();
+    ctx.translate(player.x+player.size/2, player.y+player.size/2);
+    ctx.rotate(player.angle*Math.PI/180);
+    ctx.rect(-player.size/2, -player.size/2, player.size, player.size);
+    ctx.fillStyle = "black";
+    ctx.fill();
+    ctx.beginPath()
+    ctx.rect(0, player.size/2, player.size/5, player.size/5);
+    ctx.fillStyle = "red";
+    ctx.fill();
+    ctx.restore();
+}
+
+let player = {x: 100, y:50, size: 20, angle: 0};
+gameLoop();
+</script>
+</body>
