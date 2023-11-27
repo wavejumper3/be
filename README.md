@@ -1,2 +1,2 @@
-# rick_ip
-Rick Astley steals your ip
+# wavejumper.be
+My personal website/about me!
