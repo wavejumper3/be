@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wave's Blog!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="waves-blog.png" alt="Logo" id="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/bloggin.html">Main blog page</a></li>
+                <li><a href="http://wavejumper.be/"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content">
+        <main>
+            <h1>A New BLOG!</h1>
+            <h3>March 15th, 2024</h3>
+            <p>So....<br> I decided to add a blog to this thing.<br><br>Seems like a pretty decent idea? Not sure. I always wanted to create a blog online, seems like a pretty great place to make it. The domain was an absolute STEAL, not that it was super in-demand in the first place. More of a "this suits exactly what I'm doing perfectly!". I had the funny idea to create a website "(myname).be", specifically because links would be set up like "wavejumper.be/gaming". I mean, "readable links"? That has to be the most readable link I've seen in my life! The blog will probably be a bit less readable, but thats ok.<br><br>Anyhow, I don't have much to say here. Just, hope this blog goes places, I think it will.<br>Oh yeah - the little robot in the logo? Her name is Suzan. Say hi to her for me, will ya? She's also in the favicon.<br><br>Cya later,</p><br>
+            <h2>Wavejumper</h2>
+        </main>
+         <aside>
+           <button id="toggleBtn">Show/hide posts</button>
+            <div class="panel">
+              <ul id="link-list">
+              </ul>
+          </div>
+        </aside>
+    </div>
+  <script src="currentArticles.js"></script>
+  <script>
+        const toggleBtn = document.getElementById('toggleBtn');
+        const panel = document.querySelector('.panel');
+        const listOfLinks = document.getElementById('link-list');
+        currentArticles.forEach((article) => {
+          var a = document.createElement("a");
+          var link = document.createTextNode(article.name);
+          a.appendChild(link);
+          a.href = article.link;
+          var li = document.createElement("li");
+          li.appendChild(a);
+          listOfLinks.appendChild(li);
+        });
+        
+        
+        toggleBtn.addEventListener('click', () => {
+            if (panel.style.display == 'none') {panel.style.display = "inline";} else {panel.style.display = "none"}
+        });
+    </script>
+</body>
+</html>
