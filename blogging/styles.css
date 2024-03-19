@@ -52,6 +52,12 @@ a {
   color: white;
 }
 
+.img20p {
+	display: flex;
+	flex-flow: row nowrap;
+	max-width: 20%;
+}
+
 main {
     flex: 1;
     padding: 20px;

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Helper Script!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="waves-blog.png" alt="Logo" id="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/bloggin.html">Main blog page</a></li>
+                <li><a href="http://wavejumper.be/"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content">
+        <main>
+		<h1>A Blog Page Helper Script!</h1>
+<br><p>Ok, so, this is pretty fun. Wrote a script that streamlines creating new pages on my blog!<br>I write everything myself in html, so I created my own tool to throw text into a boilerplate file.</p>
+<h3>However...</h3>
+<img src='images/suzan-smile.png' alt="Suzan Smiling" class="img20p">
+<h3>Stuff that isn't just text?</h3>
+<p>WOOOOOOOOO<br>That's exciting, right?<br>...right?</p><br>
+<p>...anyone?<br>...ok. Guess it's not.<br><br>C'yall later,</p>
+<h2>Wavejumper</h2>
+        </main>
+         <aside>
+           <button id="toggleBtn">Show/hide posts</button>
+            <div class="panel">
+              <ul id="link-list">
+              </ul>
+          </div>
+        </aside>
+    </div>
+  <script src="currentArticles.js"></script>
+  <script>
+	const toggleBtn = document.getElementById('toggleBtn');
+	const panel = document.querySelector('.panel');
+	const listOfLinks = document.getElementById('link-list');
+	currentArticles.forEach((article) => {
+		var a = document.createElement("a");
+		var link = document.createTextNode(article.name);
+		a.appendChild(link);
+		a.href = article.link;
+		var li = document.createElement("li");
+		li.appendChild(a);
+		listOfLinks.appendChild(li);
+        });
+        
+        
+        toggleBtn.addEventListener('click', () => {
+		if (panel.style.display == 'none') {panel.style.display = "inline";} else {panel.style.display = "none"}
+        });
+    </script>
+</body>
+</html>
