@@ -22,6 +22,7 @@ def main():
 	while input("q to quit:") != "q":
 		tag = input("\nWhat tag? ('h1', 'h2', 'h3', 'p', 'br', 'img') \n")
 		article = add_tag(article, tag)
+		print(article)
 	page = page.replace("$$$$$$$$", article)
 	f = open(name, "w")
 	f.write(page)
@@ -32,7 +33,7 @@ def add_tag(article, tag):
 		return article + "<img src='" + input("\nImage Location: ") + "'>"
 	if tag == "br":
 		return article + "<br>"
-	article = article + "<" + tag + ">" + input("\nText: ") + "</" + tag + ">"
+	return article + "<" + tag + ">" + input("\nText: ") + "</" + tag + ">"
 
 if __name__ == "__main__":
 	main()
