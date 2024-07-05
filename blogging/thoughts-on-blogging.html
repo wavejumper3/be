@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>thoughts-on-blogging</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="waves-blog.png" alt="Logo" id="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/bloggin.html">Main blog page</a></li>
+                <li><a href="http://wavejumper.be/"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content">
+        <main>
+		<h1>My Thoughts on Blogging</h1><h3>(As it applies to my life)</h3><br><p>I have this blog now. Yippee!</p><p>Issue is, I don't have much time to write for it. A lot of ideas I have are too unrefined to put into print just yet, and my art is yet to be scanned in. Not to mention I haven't yet found a satisfactory way to self-host this website (Web security is not yet my forte, and I won't pretend it is).</p><h2>Now, what will I share here, then?</h2><p>Frankly, not much.</p><p>I may write stories or poems and put them here, intersplicing any longer, personal stories I'l rl regale the hypothetical reader with. Will anyone read this? Who knows, who cares. It's out there now and that's all I need.</p>
+        </main>
+         <aside>
+           <button id="toggleBtn">Show/hide posts</button>
+            <div class="panel">
+              <ul id="link-list">
+              </ul>
+          </div>
+        </aside>
+    </div>
+  <script src="currentArticles.js"></script>
+  <script>
+        const toggleBtn = document.getElementById('toggleBtn');
+        const panel = document.querySelector('.panel');
+        const listOfLinks = document.getElementById('link-list');
+        currentArticles.forEach((article) => {
+          var a = document.createElement("a");
+          var link = document.createTextNode(article.name);
+          a.appendChild(link);
+          a.href = article.link;
+          var li = document.createElement("li");
+          li.appendChild(a);
+          listOfLinks.appendChild(li);
+        });
+        
+        
+        toggleBtn.addEventListener('click', () => {
+            if (panel.style.display == 'none') {panel.style.display = "inline";} else {panel.style.display = "none"}
+        });
+    </script>
+</body>
+</html>
