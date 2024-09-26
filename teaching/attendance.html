@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Blog Helper Script!</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<header>
+		<div class="logo">
+			<img src="images/waves-lessons.png" alt="Logo" id="Logo">
+		</div>
+		<nav>
+			<ul>
+				<li><a href="http://wavejumper.be/">Back to my Main Page</a></li>
+				<li><a href="http://wavejumper.be/"></a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="content">
+		<main>
+		<h1>How to take attendance quickly</h1>
+		<p>So, my professor asked the class - <br><i>"What do you think is the best way to take attendance?"</i><br>I gave a solution I was fairly proud of, but it didn't get used.<br>My professor does web development, so, guess what?</p>
+		<h3>I'm gonna make this page an awesome explanation of my proposed solution!</h3>
+		<p>Ok, so, it relies on a fair few assumptions.<br>One, it assumes that the majority of people in class will be present.<br>Two, it assumes that mouse clicks and name-calling both take constant time.<br>There's actually two algorithms I'll explain, as well as the one he used.<br>I'll explain his first.</p>
+		<h3>This guy's algorithm!!!</h3>
+		<p>So, he took the naiive approach:</p>
+		<h6>Starting condition: all students are marked as "not marked", set index to first student.</h6>
+		<ol>
+			<li>Call out that student's name.</li>
+			<li>If they respond, mark them present (one mouse click)</li>
+			<li>If they do NOT respond after <i>X</i> calls, mark absent (two mouse clicks)</li>
+			<li>Move, repeat the above.</li>
+			<li>Once done, click "submit"</li>
+		</ol>
+		<p>Now, this does make decent time in the majority of cases, and is O(n). More exactly, its O(2n + 2<i>X</i>[num absent]).</p>
+		<p>However, <b>this can be improved!</b><br>Here's...</p>
+		<h3>My originally proposed algorithm!!!</h3>
+		<p>I noted that the software allows you to mark everyone as present, and that most people <i>are</i> present.</p>
+		<h6>Starting condition: all students are marked as "present" (one click), set index to first student.</h6>
+		<ol>
+			<li>Call out that student's name. (one click)</li>
+			<li>If they respond, move on.</li>
+			<li>If they do NOT respond after <i>X</i> calls, mark absent (one mouse click)</li>
+			<li>Move, repeat the above.</li>
+			<li>Once done, click "submit"</li>
+		</ol>
+		<p>Now, this does takes <i>less</i> time in the majority of cases, despite also being O(n). More exactly, though, its O(n + <i>X</i>[num absent] + 1).</p>
+		<p><b>2n + 2<i>X</i>[num absent]</b> will usually be larger than <b>n + <i>X</i>[num absent] + 1)</b><br><br>(That's a good thing)</p>
+		<br>
+		<p>My third algorithm technically adds some optimisation, but requires copying over last class's attendance.<br>Considering most absences are runs, asking "was anyone not here last class?" to correct last week's absences is faster.<br>This is because verifying an absence takes much longer than someone who is there.</p>
+		<p><i>(The following image has no relation to the text, just wanted to add it somewhere)</i><p>
+		<img src='images/lizard.png' alt="This is a picture of my favourite childhood plush." class="img20p">
+		<p><i>His name is Lizard. Say hi to Lizard for me, will ya?</i><br><br>Anywho...<br><br><p>
+		<p>C'yall next time,</p>
+<h2>Wavejumper</h2>
+		</main>
+		 <aside>
+		   <button id="toggleBtn">Show/hide posts</button>
+			<div class="panel">
+			  <ul id="link-list">
+			  </ul>
+		  </div>
+		</aside>
+	</div>
+  <script src="currentArticles.js"></script>
+  <script>
+	const toggleBtn = document.getElementById('toggleBtn');
+	const panel = document.querySelector('.panel');
+	const listOfLinks = document.getElementById('link-list');
+	currentArticles.forEach((article) => {
+		var a = document.createElement("a");
+		var link = document.createTextNode(article.name);
+		a.appendChild(link);
+		a.href = article.link;
+		var li = document.createElement("li");
+		li.appendChild(a);
+		listOfLinks.appendChild(li);
+		});
+		
+		
+		toggleBtn.addEventListener('click', () => {
+		if (panel.style.display == 'none') {panel.style.display = "inline";} else {panel.style.display = "none"}
+		});
+	</script>
+</body>
+</html>
