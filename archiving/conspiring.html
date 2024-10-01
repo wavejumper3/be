@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head><script src="/docs/5.3/assets/js/color-modes.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="title" content="What's wavejumper?">
+	<meta name="description" content="">
+
+    <title>WaveJumper be....</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/headers/">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Favicons -->
+<meta name="theme-color" content="#712cf9">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <style>
+		.form-control-dark {
+		  border-color: var(--bs-gray);
+		}
+		.form-control-dark:focus {
+		  border-color: #fff;
+		  box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .25);
+		}
+
+		.text-small {
+		  font-size: 85%;
+		}
+
+		.dropdown-toggle:not(:focus) {
+		  outline: 0;
+		}
+	</style>
+  </head>
+  <body data-bs-theme="dark">
+<main>
+<header class="py-3 mb-3 border-bottom fixed-top bg-dark">
+    <div class="container-fluid d-grid gap-3 align-items-center" style="grid-template-columns: 1fr 2fr;">
+      <div class="dropdown">
+        <a href="/" class="d-flex align-items-center col-lg-4 mb-2 mb-lg-0 link-body-emphasis text-decoration-none" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="fa-solid fa-house mx-3"></i>
+		  Wavejumper
+        </a>
+      </div>
+
+      <div class="d-flex align-items-center">
+        <form class="w-100 me-3" role="search">
+          <!--<input type="search" class="form-control" placeholder="Search..." aria-label="Search">-->
+        </form>
+
+        <div class="flex-shrink-0 dropdown">
+          <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="pfp.jpg" alt="pfp" width="48" height="48" class="rounded-circle">
+          </a>
+          <ul class="dropdown-menu text-small shadow">
+            <li><a class="dropdown-item" href="http://wavejumper.be/gaming">Gaming</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="http://wavejumper.be/funny">Funny</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="https://tech.lgbt/@wavejumper3"><i class="fa-brands fa-mastodon px-1"></i>Mastodon</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+</header>
+  
+  <div class="py-4 my-4"></div>
+
+  <div class="col-12">
+    
+  
+	  <div class="px-4 mt-2 mb-5 text-center">
+		<h1><b>Mr. Game and Watch has lore?????</b></h1>
+		<h2>Yes, and I'm tired of pretending he doesn't.</h2>
+		<h1>Why I found this in the first place</h1>
+		<p>So, I know a lot of people <i>only</i> know this goofball through Super Smash Brothers.<br>However, he had games in the 80s! He was literally Nintendo's first forray into gaming, and months older than Pac-Man.<br>Of course, being so old, the absolute impact he had on Nintendo as a company has been pretty forgotten.<br>Quickly said, Gunpei Yokoi was the inventor of the Game and Watch handhelds, but also the D-Pad, the Gameboy, and Nintendo's entire philosophy of "Make good games on slightly older technology", which has kept them afloat to this day.<br>So, realizing the actual impact, I decided to look into if there was any actual story there.<br><br>There wasn't.<br>Minigames. Only minigames. I own a few, and at first, it shocked me. I walked away from this, dissapointed.<br><br>Then, something incredible happened...<br>
+		</p>
+		<h1>Wario Land 4</h1>
+		<p>Stick with me. This will make sense, I swear.<br>Wario Land 4 has Wario commiting his normal smash-and-grab shenanigans, like the previous Wario Land games.<br>Now, in this one, he's grave robbing the tomb of a long-dead princess.<br>There's a strange inky cat that seems to follow him and help out, and the walls have GnW-shaped hieroglyphs. Not to mention the shopkeeper being a near-perfect lookalike.<br>Spoiler for a 20-year old game, but turns out the cat <b>is</b> the princess who's tomb you're raiding, and because the shopkeeper is the cat, that means the princess is GnW.<br>Yep: Mr. Game and Watch was a princess from the Mushroom kingdom.<br>
+		</p>
+		<h1>Big claim there, buddy. Prove it!</h1>
+		<p>I can, actually. In fact, <i>every</i> appearance of GnW <b>ever</b> can be explained.<br>So, the handhelds are most confusing, but it's best to start there.<br>At the end of Wario Land 4, GnW (Previous name, Princess Shokora, GnW for brevity) ascends into the sky and is never heard from again.<br>Now, this seems to only add to the claim, but explains many confusing things: What if GnW did not end up in an afterlife, but in a void?<br>In that case, preforming menial tasks to pass the time makes perfect sense.<br>And it has been confirmed that GnW is capable of self-cloning and shapeshifting (in the 2d context, source below). So, that explains the handhelds: "something to do in the infinite solitude ahead".<br>
+		</p>
+		<h3>Game and Watch Galleries</h3>
+		<p>These came out on the Gameboy consoles (heavily influenced in design by Gunpei Yokoi, same guy that made GnW originally).<br>These are ports of the minigames, but also showing a mirrored version with Mario characters.<br>Now, if you consider GnW as having originated from that world, it looks more like entangled worlds affecting each other in strange ways.<br>Just a thought.</p>
+		<h3>MELEE!!!</h3>
+		<p>Look, I know Smash doesn't affect most series's canon, but we don't have much to work with here, and seeing Smash Bros as a main series he resides is explainable.<br>[For those curious, it could be a OoT-style timesplit, going through Paper Mario (2D Mario, not super self-aware of being paper, also Vivian), Warioware (Wario gets repaid by learning the art of Microgames), and Smash Bros Melee]<br>So, GnW escaped the void. Now what?<br>He's a broken mess of a character, thats what.<br>GnW is a broken character in Melee. Not in a good way, in a "so unfinished that his hitbox goes past his shield" sort of way.<br>Makes sense after all that. But, GnW does get his redemption.<br></p>
+		<h2>SUBSPACE!!!</h2> <p>Ok, Subspace has a suprising amount of stuff to go off of.<br>Mostly thanks to the Brawl Dojo, which is thankfully archived on archive.org.<br>So, on it, Sakurai states that:<br><b>Gnw is used as raw material to create characters cloned:</b> (He is ground up as raw material. The purple dust when enemies are killed? Made of the same substance as GnW.)<br><b>Gnw "has no concept of good and evil":</b> (I take this as "too depressed to care" in context, but its used to explain why GnW allows the above).<br><b>Game and Watch's cutscene</b><br>This, to me, is the "killer app" of this entire theory. Taking GnW as a long-forgotten, cursed, long-isolated Mushroom kingdom royal, the actions here make a heck of a lot more sense:</p>
+		 <a href="https://youtu.be/-BrrpEbj7mA?si=BSN_zkk3F_2I2CnD"><button type="button" class="btn btn-primary btn-sm px-4 gap-3">The cutscene on Youtube</button></a> 
+		<p><br>So, yea. That's the idea I've kept bottled up far too long.<br>I spread this because it is interesting, and because I really wanna see the 2d goofball get use again, outside of his current menial role.<br>(Insert Epic Mickey reference here. That plotline could work, but yknow.)</p>
+    	<div class="col-lg-6 mx-auto">
+		<h1>What else might <s>Mr. Game and Watch</s></h1><h3>Wait I mean</h3><h1>What else might Wavejumper be?</h1>
+		<div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+			<a href="http://wavejumper.be/gaming.html"><button type="button" class="btn btn-primary btn-lg px-4 gap-3">Gaming</button></a>
+			<a href="http://wavejumper.be/funny.html"><button type="button" class="btn btn-primary btn-lg px-4">Funny</button></a>
+		</div>
+	</div>
+	  </div>
+  
+  </div>
+  
+  
+</main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    </body>
+</html>
